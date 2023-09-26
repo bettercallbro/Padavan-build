@@ -60,10 +60,10 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TROJAN/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME/d' .config
-        sed -i '/CONFIG_FIRMWARE_CPU_1000MHZ/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SQM/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENVPN/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME/d' .config
+        #sed -i '/CONFIG_FIRMWARE_CPU_1000MHZ/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_SQM/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENVPN/d' .config
         sed -i '/CONFIG_FIRMWARE_ENABLE_IPV6/d' .config
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
         ######################################################################
@@ -74,9 +74,9 @@ jobs:
         #echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config
         #echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config
         #echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
-        #echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config #集成trojan执行文件 ~0.5M
-        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #adg DNS去AD
+        #echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #adg DNS去AD
         #echo "CONFIG_FIRMWARE_CPU_1000MHZ=y" >> .config
         #echo "CONFIG_FIRMWARE_INCLUDE_SQM=y" >> .config #SQM QOS
         #echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=n" >> .config
